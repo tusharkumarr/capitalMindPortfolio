@@ -1,0 +1,46 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9fafb; /* light gray page background */
+}
+
+/* App container with sidebar + main content */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb; /* same as body to avoid black gaps */
+}
+
+/* Sidebar stays fixed */
+.sidebar {
+  width: 16rem; /* 256px */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff; /* sidebar background */
+  border-right: 1px solid #e5e7eb; /* subtle separator */
+}
+
+/* Main content centered horizontally */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+
+  /* Make content not touch sidebar and center */
+  margin-left: 16rem; /* leave space for sidebar */
+  display: flex;
+  justify-content: center; /* horizontal centering of inner content */
+  box-sizing: border-box;
+  background-color: #f9fafb; /* same as body */
+}
+
+/* Inner wrapper to restrict width */
+.main-content .content-wrapper {
+  width: 100%;
+  max-width: 1200px; /* keeps content from stretching too wide */
+}

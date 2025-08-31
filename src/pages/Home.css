@@ -1,0 +1,120 @@
+/* General container */
+.home-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* Cards container - 3 cards per row */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+  gap: 20px; /* Space between cards */
+  margin-bottom: 24px;
+}
+
+/* Latest posts */
+.latest-posts-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.latest-posts .post {
+  margin-bottom: 24px;
+}
+
+/* Latest posts - two columns layout */
+.latest-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+
+  .latest-posts {
+    grid-template-columns: 1fr; /* Single column posts */
+  }
+}
+
+/* Post text styling */
+.post-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.post-title {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+}
+
+.post-text {
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.post-link {
+  color: #16a34a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}
+
+/* Hero section (optional) */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff9800;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.hero button:hover {
+  background: #e68900;
+}

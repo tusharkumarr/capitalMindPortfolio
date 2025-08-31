@@ -1,0 +1,144 @@
+/* General container */
+.home-container {
+  padding: 20px;
+  width: 100%;          /* take full width */
+  min-height: 100vh;    /* cover entire screen height */
+  margin: 0;            /* remove centered margin */
+  color: #333;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* include padding in width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titles */
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #111;
+  text-align: center; /* centered title */
+}
+
+.latest-posts-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+/* Table */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.portfolio-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+/* Chart wrapper */
+.chart-wrapper {
+  flex: 1;              /* chart takes remaining screen space */
+  width: 100%;
+  height: 60vh;         /* make chart big enough */
+  margin-bottom: 20px;
+}
+
+/* Chart header: Equity Curve + Controls */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Left side: Equity Curve title + Live since */
+.chart-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-since-text {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Right side: From/To date pickers */
+.chart-right {
+  display: flex;
+  align-items: center;
+}
+
+.date-filters-inline {
+  display: flex;
+  gap: 12px;
+}
+
+.date-filters-inline label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: black;
+}
+
+.date-filters-inline input {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: black;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.date-filters-inline input:focus {
+  border-color: #6c63ff; /* purple highlight on focus */
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart-right {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .date-filters-inline {
+    width: 100%;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .chart-wrapper {
+    height: 50vh; /* slightly smaller on mobile */
+  }
+}
